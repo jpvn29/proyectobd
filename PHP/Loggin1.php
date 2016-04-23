@@ -2,7 +2,7 @@
 $db_host="localhost";
 $db_user="root";
 $db_password="";
-$db_name="proyecto";
+$db_name="proyectobases";
 $message = "Passwor incorrecto";
 $message1 = "Passwor correcto";
 
