@@ -1,10 +1,18 @@
-<!doctype html>
-<html>
-<head>
-	<title>Main</title>
-</head>
-<body>
-	<h1>Main</h1>
 
-</body>
-</html>
+
+<?php
+mysql_connect('localhost', 'root', '');
+mysql_select_db('proyectobases');
+
+$sql = "SELECT nombre FROM vegetales";
+$result = mysql_query($sql);
+
+echo "<select name='vegetales'>";
+
+while ($row = mysql_fetch_array($result)) 
+{
+    echo "<option value='" . $row['nombre'] ."'>" . $row['nombre'] ."</option>";
+}
+echo "</select>";
+
+?>
