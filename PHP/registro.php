@@ -19,6 +19,7 @@ $req = (strlen($nombre)*strlen($mail)) or die ("No se llenaron los campos");
 
 if($pass != $rpass){
 	echo "<script type='text/javascript'>alert('$message');</script>";
+	
 
 }
 elseif ($pass == $rpass)
@@ -29,7 +30,9 @@ $passUsuario = md5($pass);
 $consulta="INSERT INTO usuario (Nombre,Email,PW) VALUES ('$nombre','$mail','$pass')";
 
 $resultado = mysql_query($consulta,$db_connection);
+ echo "<script type='text/javascript'> window.location.href = '../Loggin.html'</script>";
 }
+
 
 		
 ?>

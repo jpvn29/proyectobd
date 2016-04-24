@@ -97,6 +97,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	box-shadow:         inset 0 0 1px rgba(0, 0, 0, 0.7), 0 0 1px #e00;
 }
 
+button{
+	padding: 0 15px;
+	height: 30px;
+	font: bold 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+	cursor: pointer;
+	border: 1px solid #0d3d6a;
+	outline: none;
+	position: relative;
+	background-color: #1d83e2;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#1d83e2), to(#0d3d6a)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #1d83e2, #0d3d6a); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #1d83e2, #0d3d6a); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #1d83e2, #0d3d6a); /* IE10 */
+	background-image:      -o-linear-gradient(top, #1d83e2, #0d3d6a); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #1d83e2, #0d3d6a);
+	-pie-background:          linear-gradient(top, #1d83e2, #0d3d6a); /* IE6-IE9 */
+	-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+	behavior: url(PIE.htc);
+
+}
 /* Form submit button */
 .form-btn {
 	padding: 0 15px;
