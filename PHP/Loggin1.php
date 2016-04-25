@@ -21,8 +21,9 @@ $resultado1 = mysql_query($usuarios,$db_connection);
 $result1 = mysql_fetch_array($resultado1);
 $fina2=$result1['id'];
 
-
+session_start();
 $_SESSION["Id"] = $fina2;
+$GLOBALS['id'] = $fina2;
 
 
 
@@ -40,7 +41,7 @@ $fina=$result['PW'];
 
 if ($mail == 'admin@root' && $pass == 'admin')
 {
-echo "<script type='text/javascript'> window.location.href = '../Admin.html'</script>";
+echo "<script type='text/javascript'> window.location.href = '../opcionad.html'</script>";
 
 }
 
@@ -51,7 +52,7 @@ else
 if ($fina == $pass)
 {
 
- echo "<script type='text/javascript'> window.location.href = '../principal.html'</script>";
+ echo "<script type='text/javascript'> window.location.href = 'principal.php'</script>";
 
 }
 else

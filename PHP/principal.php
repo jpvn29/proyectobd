@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Principal</title>
-	<link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/estilos.css">
 	<meta charset="UTF-8">
 	<style>
 	.fixed-nav-bar {
@@ -35,28 +36,31 @@
   	
  
     </nav>
-    <h2 align ="left">
-
-    	1111
-    	<?php
-    	echo 1;
-
-    	?></h2>
+  
 
 	<p><center><img src="https://i.ytimg.com/vi/7r0LubgjYbs/maxresdefault.jpg" width="500px" align = "center"></center></p>
+	<center><h2>Bienvenido 
 
-	<center><a href="php/comida.php"><button type="submit">Registrar Comida</button></a></center>
-	<center><a href="php/VerCom.php"><button type="submit">Ver Comidas</button></a></center>
-	<center><a href="#"><button type="submit">Salir</button></a></center>
-	    <h2 align ="left">
-
-    	1111
-    	<?php
-    	echo 1;
-
-    	?>
-    </h2>
+		<?php
 	
+		session_start();
+	$nomU = $_SESSION["Id"];
+	mysql_connect('localhost', 'root', '');
+mysql_select_db('proyectobases');
+$sql = "SELECT nombre FROM usuario where id = $nomU";
+$resultado = mysql_query($sql);
+$result = mysql_fetch_array($resultado);
+$fina=$result['nombre'];
+echo $fina;
+$_SESSION["NomUsu"] = $fina
+		?>
+		<br> ¿Qué deseas hacer?
+</h2></center>
+
+	<center><a href="comida.php"><button type="submit">Registrar Comida</button></a></center>
+	<center><a href="VerCom.php"><button type="submit">Ver Comidas</button></a></center>
+	<center><a href="../loggin.html"><button type="submit">Salir</button></a></center>
+	 
 
 </body>
 </html>
